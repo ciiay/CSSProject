@@ -14,6 +14,22 @@
         z-index: 500;
         box-shadow: 0 1rem 3rem rgba($color-black, .1);
         cursor: pointer;
+
+        @include response(tab-port) {
+            height: 5.5rem;
+            width: 5.5rem;
+
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include response(phone) {
+            height: 4.5rem;
+            width: 4.5rem;
+
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &__background {
@@ -27,6 +43,22 @@
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
 
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
+
+        @include response(tab-port) {
+            height: 5rem;
+            width: 5rem;
+
+            top: 4.3rem;
+            right: 4.3rem;
+        }
+
+        @include response(phone) {
+            height: 4rem;
+            width: 4rem;
+
+            top: 3.8rem;
+            right: 3.8rem;
+        }
     }
 
     &__nav {
@@ -97,12 +129,17 @@
 
         position: relative;
         @include center;
+        width: 50%;
 
+        &::before,
+        &::after {
+            width: 100%;
+        }
         
         &,
         &::before,
         &::after {
-            width: 3rem;
+            //width: 100%;
             height: 2px;
             background-color: $color-grey-dark-3;
             display: inline-block;
