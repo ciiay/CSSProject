@@ -13,20 +13,20 @@ html {
 
 
     // orders matter!!! the last one apply if both meet the condition
-    @include response(tab-land) {   // ask width <1200px?
+    @include respond(tab-land) {   // ask width <1200px?
         font-size: 56.25%;         //1 rem = 9px -> 9/16=56.25%
     }
 
-    @include response(tab-port) {   //asks width < 900px?
+    @include respond(tab-port) {   //asks width < 900px?
         font-size: 50%;         //1 rem = 8px -> 8/16=50%
     }
 
-    @include response(phone) {      //asks width < 600px?
+    @include respond(phone) {      //asks width < 600px?
         font-size: 37.5%;         //1rem = 6px -> 6/16=37.5%
         // <600 is also <900 so the phone size will apply the tab-port sizeing
     }
 
-    @include response(big-desktop) {
+    @include respond(big-desktop) {
         font-size: 75%;            //1rem = 12px -> 12/16 = 75%
     }
 }
@@ -35,7 +35,7 @@ body {
     box-sizing: border-box;
     padding: 3rem;
 
-    @include response(tab-port) {   //asks width < 900px?
+    @include respond(tab-port) {   //asks width < 900px?
         padding: 0;
     }
 }
