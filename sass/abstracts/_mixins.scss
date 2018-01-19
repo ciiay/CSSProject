@@ -44,7 +44,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
         @media (max-width: 56.25em) { @content };    //900px
     };
 
-    @if $breakpoint == ptab-land {
+    @if $breakpoint == tab-land {
         @media (max-width: 75em) { @content };      //1200px
     };
 

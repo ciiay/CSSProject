@@ -63,15 +63,37 @@
         rgba($color-white, .9) 50%, 
         transparent 50%), 
     url(../img/nat-10.jpg);
-    background-size: 100%;
+    background-size: 100%;   // the img fits the container 100% in x direction.
     border-radius: $border-radius-3;
     box-shadow: $shadow-medium;
 
-    height: 56rem;
+    @include respond(tab-land){
+        background-image: linear-gradient(105deg, 
+        rgba($color-white, .9) 0%, 
+        rgba($color-white, .9) 65%, 
+        transparent 65%), 
+    url(../img/nat-10.jpg);
+        background-size: cover;     // the img fits the container 100% in y direction
+    }
+
+    @include respond(tab-port) {
+        background-image: linear-gradient(to right, 
+        rgba($color-white, .9) 0%, 
+        rgba($color-white, .9) 100%), 
+    url(../img/nat-10.jpg);
+    }
+
 
     &__form {
         width: 50%;
         padding: 6rem;
         
+        @include respond(tab-land){
+            width: 65%;
+        }
+
+        @include respond(tab-port){
+            width: 100%;
+        }
     }
 }
